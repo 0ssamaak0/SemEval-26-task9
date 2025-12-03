@@ -1,5 +1,5 @@
 # Ideas
-- Use AlDi to visualize train data
+- Use AlDi to visualize train data ✅
 - ARBERT: MSA & MARBERT: Dialects (Merging?)
 - DSPY
 - Adapters? 
@@ -7,7 +7,7 @@
 
 
 # Dsearchers
-- Gemini: https://gemini.google.com/share/644a7deaa305
+- Gemini: https://gemini.google.com/share/c0a27c2a3eeb
 - ChatGPT: https://chatgpt.com/share/6930107a-a47c-8000-a8f1-8d780935eefa
 - PPL: https://www.perplexity.ai/search/i-want-you-to-help-me-with-a-r-i3CXW6upS.2McwauOGJQBw#0
 
