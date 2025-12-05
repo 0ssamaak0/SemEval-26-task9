@@ -1,0 +1,47 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "In Gaza there are no Underground Railroads for liberating the hostages, only tunnels for keeping them prisoners. An apartheid state harbors hostage takers.",
+      "polarization": "polarization"
+    },
+    {
+      "augmented": true,
+      "sentence": "Not when it comes to the radical left.",
+      "polarization": "polarization"
+    },
+    {
+      "augmented": true,
+      "sentence": "Why didnt Hegseth meet with Democrats?",
+      "polarization": "no polarization"
+    },
+    {
+      "augmented": true,
+      "sentence": "All in the Family: Sheriff's Son Is New DPS Officer",
+      "polarization": "no polarization"
+    }
+  ],
+  "signature": {
+    "instructions": "You are an analyst specializing in political communication and biased language. Your task is to analyze a given sentence and determine if it contains polarizing language. Polarizing language is used to create or highlight sharp divisions between opposing groups, often through the use of accusatory language, \"us vs. them\" framing, derogatory labels, or rhetoric intended to foster animosity and conflict. Look for signs of:\n\n*   **Accusatory or vilifying language:** Referring to an entire group with terms like \"evil,\" \"radical,\" or other derogatory labels.\n*   **\"Us vs. them\" framing:** Creating a stark distinction between in-groups and out-groups.\n*   **Stereotyping and generalization:** Making broad, negative claims about an entire group of people.\n*   **Dehumanization:** Portraying a group as less than human.\n\nReview the sentence below and classify it. Respond with only the label 'polarization' or 'no polarization'. Do not provide any explanation.\n\nSentence: {sentence}\nPolarization:",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Polarization:",
+        "description": "Return \"polarization\" or \"no polarization\"."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}
