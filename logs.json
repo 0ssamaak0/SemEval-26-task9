@@ -1,27 +1,191 @@
-{
-    "trial_id": 444645,
-    "subtask_1": {
-        "ENGLISH": {
-            "eval_results": {
-                "eval_loss": 0.45452237129211426,
-                "eval_f1_macro": 0.749094035992875,
-                "eval_accuracy": 0.7643410852713178,
-                "eval_precision": 0.6653386454183267,
-                "eval_recall": 0.7106382978723405,
-                "eval_f1_binary": 0.6872427983539094,
-                "eval_f1_micro": 0.7643410852713178,
-                "eval_runtime": 2.1305,
-                "eval_samples_per_second": 302.749,
-                "eval_steps_per_second": 38.02,
-                "epoch": 3.0
+[
+    {
+        "trial_id": "000001",
+        "subtask_1": {
+            "score": 0.66,
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.49709340929985046,
+                    "eval_accuracy": 0.7705426356589147,
+                    "eval_f1_binary": 0.6696428571428571,
+                    "eval_f1_macro": 0.74693544282321,
+                    "eval_f1_micro": 0.7705426356589147,
+                    "eval_runtime": 1.242,
+                    "eval_samples_per_second": 519.311,
+                    "eval_steps_per_second": 65.216,
+                    "epoch": 10.0
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.5320671200752258,
+                    "eval_accuracy": 0.7115384615384616,
+                    "eval_f1_binary": 0.6948356807511737,
+                    "eval_f1_macro": 0.7106716973180833,
+                    "eval_f1_micro": 0.7115384615384616,
+                    "eval_runtime": 2.3338,
+                    "eval_samples_per_second": 289.66,
+                    "eval_steps_per_second": 36.422,
+                    "epoch": 10.0
+                }
+            }
+        },
+        "metadata": {
+            "approach": "MTL_Gated",
+            "model_eng": "bert-base-uncased",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 64,
+            "per_device_eval_batch_size": 8,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_arb": "bert-base-uncased",
+            "id_on_site": 447014
+        },
+        "subtask_2": {
+            "score": 0.06,
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.49709340929985046,
+                    "eval_f1_macro": 0.1649313318428617,
+                    "eval_f1_micro": 0.5275142314990513,
+                    "eval_runtime": 1.242,
+                    "eval_samples_per_second": 519.311,
+                    "eval_steps_per_second": 65.216,
+                    "epoch": 10.0
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.5320671200752258,
+                    "eval_f1_macro": 0.1143635724331927,
+                    "eval_f1_micro": 0.19858156028368795,
+                    "eval_runtime": 2.3338,
+                    "eval_samples_per_second": 289.66,
+                    "eval_steps_per_second": 36.422,
+                    "epoch": 10.0
+                }
+            }
+        },
+        "subtask_3": {
+            "score": 0.26,
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.49709340929985046,
+                    "eval_f1_macro": 0.2938462815302812,
+                    "eval_f1_micro": 0.36941410129096325,
+                    "eval_runtime": 1.242,
+                    "eval_samples_per_second": 519.311,
+                    "eval_steps_per_second": 65.216,
+                    "epoch": 10.0
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.5320671200752258,
+                    "eval_f1_macro": 0.3068775328177798,
+                    "eval_f1_micro": 0.4740827023878858,
+                    "eval_runtime": 2.3338,
+                    "eval_samples_per_second": 289.66,
+                    "eval_steps_per_second": 36.422,
+                    "epoch": 10.0
+                }
             }
         }
     },
-    "metadata": {
-        "approach": "bert",
-        "model": "bert-base-uncased",
-        "learning_rate": 32,
-        "num_train_epochs": 1234,
-        "per_device_train_batch_size": 45
-    }
-}
+    {
+        "trial_id": "000002",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.4911883771419525,
+                    "eval_accuracy": 0.8091715976331361,
+                    "eval_f1_binary": 0.8048411497730711,
+                    "eval_f1_macro": 0.8090775936998496,
+                    "eval_f1_micro": 0.8091715976331361,
+                    "eval_runtime": 3.3041,
+                    "eval_samples_per_second": 204.597,
+                    "eval_steps_per_second": 25.726,
+                    "epoch": 10.0
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.47815200686454773,
+                    "eval_accuracy": 0.7751937984496124,
+                    "eval_f1_binary": 0.6813186813186813,
+                    "eval_f1_macro": 0.7538329933539514,
+                    "eval_f1_micro": 0.7751937984496124,
+                    "eval_runtime": 2.4363,
+                    "eval_samples_per_second": 264.746,
+                    "eval_steps_per_second": 33.247,
+                    "epoch": 10.0
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_Gated",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 64,
+            "per_device_eval_batch_size": 8,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_eng": "microsoft/deberta-v3-base",
+            "id_on_site": 447043
+        },
+        "subtask_2": {
+            "score": 0.38,
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.4911883771419525,
+                    "eval_f1_macro": 0.5169923091301157,
+                    "eval_f1_micro": 0.579520697167756,
+                    "eval_runtime": 3.3041,
+                    "eval_samples_per_second": 204.597,
+                    "eval_steps_per_second": 25.726,
+                    "epoch": 10.0
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.47815200686454773,
+                    "eval_f1_macro": 0.14004294801669298,
+                    "eval_f1_micro": 0.5263157894736843,
+                    "eval_runtime": 2.4363,
+                    "eval_samples_per_second": 264.746,
+                    "eval_steps_per_second": 33.247,
+                    "epoch": 10.0
+                }
+            }
+        },
+        "subtask_3": {
+            "score": 0.37,
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.4911883771419525,
+                    "eval_f1_macro": 0.432488336994267,
+                    "eval_f1_micro": 0.6102683780630106,
+                    "eval_runtime": 3.3041,
+                    "eval_samples_per_second": 204.597,
+                    "eval_steps_per_second": 25.726,
+                    "epoch": 10.0
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.47815200686454773,
+                    "eval_f1_macro": 0.3542418115939625,
+                    "eval_f1_micro": 0.4442553191489362,
+                    "eval_runtime": 2.4363,
+                    "eval_samples_per_second": 264.746,
+                    "eval_steps_per_second": 33.247,
+                    "epoch": 10.0
+                }
+            }
+        }
+    },
+]
