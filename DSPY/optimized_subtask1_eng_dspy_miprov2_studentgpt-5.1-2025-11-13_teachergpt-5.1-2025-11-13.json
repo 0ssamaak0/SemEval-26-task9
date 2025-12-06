@@ -1,0 +1,44 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "Some def do, but many just use plain ol antiblack xenophobia thats pretty unambiguous",
+      "polarization": "polarization"
+    },
+    {
+      "sentence": "Illegal unregistered Foreign lobbyists oligarchs deserve sanctions !",
+      "polarization": "polarization"
+    },
+    {
+      "sentence": "5 takeaways on Republicans first impeachment hearing",
+      "polarization": "no polarization"
+    },
+    {
+      "sentence": "Take us with you Canada !! Sincerely all Blue States",
+      "polarization": "polarization"
+    }
+  ],
+  "signature": {
+    "instructions": "You are given a single short text (a sentence, post, or headline‑style fragment). Decide whether it contains *political/ideological polarization* and output exactly one label: **“polarization”** or **“no polarization”**.\n\n**Definition of polarization (label = “polarization”):**  \nLanguage that attacks, delegitimizes, or disparages political or ideological groups, parties, movements, or their supporters, especially using:\n- Insults, slurs, or pejorative labels (e.g., “woke” / “SJW” used as insults).\n- Stereotypes or sweeping negative generalizations about such groups.\n- Us‑vs‑them, tribal, or culture‑war framing that portrays the out‑group as corrupt, evil, stupid, dangerous, or illegitimate.\n- Explicit calls for, or celebration of, division, hatred, or exclusion of political/ideological groups.\n\n**Label as “no polarization” when:**\n- The text is neutral, descriptive, humorous, or personal without attacking a political/ideological group.\n- It discusses political topics, events, or figures in a reportive or analytical way, even if negative about specific individuals or policies, as long as it avoids broad out‑group vilification.\n- It is non‑political.\n\n**Output format:**  \nJust write one of the two options, with no explanation:  \n- `polarization`  \n- `no polarization`",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Polarization:",
+        "description": "Return \"polarization\" or \"no polarization\"."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

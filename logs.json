@@ -1,0 +1,27 @@
+{
+    "trial_id": 444645,
+    "subtask_1": {
+        "ENGLISH": {
+            "eval_results": {
+                "eval_loss": 0.45452237129211426,
+                "eval_f1_macro": 0.749094035992875,
+                "eval_accuracy": 0.7643410852713178,
+                "eval_precision": 0.6653386454183267,
+                "eval_recall": 0.7106382978723405,
+                "eval_f1_binary": 0.6872427983539094,
+                "eval_f1_micro": 0.7643410852713178,
+                "eval_runtime": 2.1305,
+                "eval_samples_per_second": 302.749,
+                "eval_steps_per_second": 38.02,
+                "epoch": 3.0
+            }
+        }
+    },
+    "metadata": {
+        "approach": "bert",
+        "model": "bert-base-uncased",
+        "learning_rate": 32,
+        "num_train_epochs": 1234,
+        "per_device_train_batch_size": 45
+    }
+}
