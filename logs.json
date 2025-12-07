@@ -1,6 +1,119 @@
 [
     {
-        "trial_id": "000001",
+        "trial_id": "B000000",
+        "metadata": {
+            "approach": "bert",
+            "model_eng": "bert-base-uncased",
+            "model_arb": "bert-base-uncased",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 3,
+            "id_on_site": 447161
+        },
+        "subtask_1": {
+            "score": 0.68,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.756
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.65
+                }
+            }
+        },
+        "subtask_2": {
+            "score": 0.03,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.268
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.045
+                }
+            }
+        },
+        "subtask_3": {
+            "score": 0.21,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.317
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.287
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "B000001",
+        "metadata": {
+            "approach": "bert",
+            "model_eng": "bert-base-uncased",
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 3,
+            "id_on_site": 447161
+        },
+        "subtask_1": {
+            "score": 0.68,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.756
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.80
+                }
+            }
+        },
+        "subtask_2": {
+            "score": 0.03,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.268
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.610
+                }
+            }
+        },
+        "subtask_3": {
+            "score": 0.21,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.317
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.486
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "GT000001",
+        "metadata": {
+            "approach": "MTL_Gated",
+            "model_eng": "bert-base-uncased",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 64,
+            "per_device_eval_batch_size": 8,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_arb": "bert-base-uncased",
+            "id_on_site": 447014
+        },
         "subtask_1": {
             "score": 0.66,
             "eng": {
@@ -29,19 +142,6 @@
                     "epoch": 10.0
                 }
             }
-        },
-        "metadata": {
-            "approach": "MTL_Gated",
-            "model_eng": "bert-base-uncased",
-            "learning_rate": 2e-05,
-            "num_train_epochs": 10,
-            "per_device_train_batch_size": 64,
-            "per_device_eval_batch_size": 8,
-            "num_types": 5,
-            "num_manifestations": 6,
-            "datasets_merge": true,
-            "model_arb": "bert-base-uncased",
-            "id_on_site": 447014
         },
         "subtask_2": {
             "score": 0.06,
@@ -95,7 +195,20 @@
         }
     },
     {
-        "trial_id": "000002",
+        "trial_id": "GT000002",
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_Gated",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 64,
+            "per_device_eval_batch_size": 8,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_eng": "microsoft/deberta-v3-base",
+            "id_on_site": 447043
+        },
         "subtask_1": {
             "arb": {
                 "eval_results": {
@@ -123,19 +236,6 @@
                     "epoch": 10.0
                 }
             }
-        },
-        "metadata": {
-            "model_arb": "UBC-NLP/MARBERTv2",
-            "approach": "MTL_Gated",
-            "learning_rate": 2e-05,
-            "num_train_epochs": 10,
-            "per_device_train_batch_size": 64,
-            "per_device_eval_batch_size": 8,
-            "num_types": 5,
-            "num_manifestations": 6,
-            "datasets_merge": true,
-            "model_eng": "microsoft/deberta-v3-base",
-            "id_on_site": 447043
         },
         "subtask_2": {
             "score": 0.38,
@@ -187,5 +287,5 @@
                 }
             }
         }
-    },
+    }
 ]
