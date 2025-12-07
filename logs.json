@@ -232,13 +232,21 @@
         "trial_id": "DSP0001S",
         "metadata": {
             "approach": "dspy basic",
-            "model": "ollama_chat/gemma3:12b"
+            "model": "ollama_chat/gemma3:12b",
+            "id_on_site": 447959
         },
         "subtask_1": {
-            "score": null,
+            "score": 0.75,
             "eng": {
+                "score": 0.74,
                 "eval_results": {
                     "eval_f1_macro": 0.7735584489912719
+                }
+            },
+            "arb": {
+                "score": 0.76,
+                "eval_results": {
+                    "eval_f1_macro": 0.7747937467482595
                 }
             }
         }
@@ -246,18 +254,22 @@
     {
         "trial_id": "0000NG1",
         "subtask_1": {
+            "score": 0.8,
             "arb": {
+                "score": 0.803,
                 "eval_results": {
                     "eval_f1_macro": 0.8222222222222222
                 }
             },
             "eng": {
+                "score": 0.782,
                 "eval_results": {
                     "eval_f1_macro": 0.7916488358673776
                 }
             }
         },
         "metadata": {
+            "id_on_site": 447952,
             "model_arb": "UBC-NLP/MARBERTv2",
             "approach": "MTL_no_gate",
             "learning_rate": 2e-05,
@@ -271,23 +283,28 @@
         },
         "subtask_2": {
             "arb": {
+                "score": 0.2808,
                 "eval_results": {
                     "eval_f1_macro": 0.3943146759286401
                 }
             },
             "eng": {
+                "score": 0.1441,
                 "eval_results": {
                     "eval_f1_macro": 0.1407035175879397
                 }
             }
         },
         "subtask_3": {
+            "score": 0.33,
             "arb": {
+                "score": 0.3269,
                 "eval_results": {
                     "eval_f1_macro": 0.38416407256783786
                 }
             },
             "eng": {
+                "score": 0.18,
                 "eval_results": {
                     "eval_f1_macro": 0.1922514619883041
                 }
@@ -306,6 +323,98 @@
             "eng": {
                 "eval_results": {
                     "eval_f1_macro": 0.7784664830119375
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "DSP0002S",
+        "metadata": {
+            "approach": "dspy basic",
+            "model": "fireworks_ai/accounts/fireworks/models/gpt-oss-20b"
+        },
+        "subtask_1": {
+            "score": null,
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8091876305061152
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8166420966420966
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "0000NG2",
+        "subtask_1": {
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.7917077175697866
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8340347923681257
+                }
+            }
+        },
+        "metadata": {
+            "model_eng": "FacebookAI/xlm-roberta-large",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 15,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_arb": "UBC-NLP/MARBERTv2"
+        },
+        "subtask_2": {
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.35815935837575
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6332211687061601
+                }
+            }
+        },
+        "subtask_3": {
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.4747274959278143
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6057450663352554
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MIPRODSP0002S",
+        "metadata": {
+            "approach": "dspy MIPROv2",
+            "student_model": "fireworks_ai/accounts/fireworks/models/gpt-oss-20b",
+            "teacher_model": "openai/gpt-5.1-2025-11-13"
+        },
+        "subtask_1": {
+            "score": null,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8166420966420966
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8423265768601285
                 }
             }
         }

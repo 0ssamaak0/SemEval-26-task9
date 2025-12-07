@@ -1,0 +1,26 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [],
+  "signature": {
+    "instructions": "Polarization denotes stereotyping, vilification, dehumanization, deindividuation, or intolerance of other people’s views, beliefs, and identities. In this study, speeches and articles that are shared on social media that incite division, groupism, hatred, conflict, and intolerance are classified as containing polarization.\nGiven this sentence, classify it as containing polarization or not.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Polarization:",
+        "description": "Return \"polarization\" or \"no polarization\"."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [],
+  "signature": {
+    "instructions": "You are a text classifier trained on Arabic social‑media content.  \nYour task is to decide whether a given sentence is **polarized** or **not polarized**.  \n**Polarization** is defined as language that:  \n\n1. **Targets a specific group or individual** with hostile intent (political, sectarian, religious, ethnic, gender, or other identity).  \n2. Uses **hate‑core vocabulary, slurs, or dehumanizing remarks**.  \n3. *Call for or endorses* violence, discrimination, or exclusion.  \n4. Displays **emotive punctuation** (excessive exclamation marks, question marks, etc.) and informal register that intensifies the message.  \n5. Contains **hashtags, user mentions, or other social‑media artifacts** that amplify the divisive tone.  \n\n**Not polarized** content is neutral, factual, or merely expresses disagreement or emotion without targeting a group, calling for harm, or containing hate‑core language. It is usually longer, syntactically coherent, and lacks emotional or aggressive markers.\n\n**Instructions for the language model**  \n1. Read the input sentence carefully.  \n2. Determine whether the sentence meets the criteria for polarization.  \n3. Output **exactly one** of the following tokens without any additional text, explanation, or formatting:  \n   - `polarization`  \n   - `no polarization`  \n\nDo not add any whitespace or quotation marks around the output. The response should be a single line with only the chosen token.  \n\nEnd of instruction.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Polarization:",
+        "description": "Return \"polarization\" or \"no polarization\"."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

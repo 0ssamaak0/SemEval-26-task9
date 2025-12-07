@@ -1,0 +1,47 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "Fascinating life journey leads me to ANRAurora News",
+      "polarization": "no polarization"
+    },
+    {
+      "augmented": true,
+      "sentence": "Lazy woke excuse to justify sjw practices",
+      "polarization": "polarization"
+    },
+    {
+      "augmented": true,
+      "sentence": "5 takeaways on Republicans first impeachment hearing",
+      "polarization": "no polarization"
+    },
+    {
+      "augmented": true,
+      "sentence": "And yet Dems are supposed to be the breeders of open borders!",
+      "polarization": "polarization"
+    }
+  ],
+  "signature": {
+    "instructions": "You are a trained political analyst specializing in identifying polarized language in public discourse. Your task is to classify sentences as either exhibiting \"polarization\" or \"no polarization.\" Polarization, in this context, signifies the use of emotionally charged language, stereotypes, vilification, dehumanization, deindividuation, or intolerance towards other people’s views, beliefs, and identities. Sentences that promote division, groupism, hatred, conflict, and intolerance are classified as containing polarization. Consider the context of current events, political commentary, and online sources when making your assessment.\n\nGiven the following sentence, classify it as either \"polarization\" or \"no polarization.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Polarization:",
+        "description": "Return \"polarization\" or \"no polarization\"."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}
