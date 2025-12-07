@@ -25,11 +25,13 @@
         "subtask_2": {
             "score": 0.03,
             "eng": {
+                "score": 0.187,
                 "eval_results": {
                     "eval_f1_macro": 0.268
                 }
             },
             "arb": {
+                "score": 0.0324,
                 "eval_results": {
                     "eval_f1_macro": 0.045
                 }
@@ -38,11 +40,13 @@
         "subtask_3": {
             "score": 0.21,
             "eng": {
+                "score": 0.3161,
                 "eval_results": {
                     "eval_f1_macro": 0.317
                 }
             },
             "arb": {
+                "score": 0.2119,
                 "eval_results": {
                     "eval_f1_macro": 0.287
                 }
@@ -53,46 +57,52 @@
         "trial_id": "B000001",
         "metadata": {
             "approach": "bert",
-            "model_eng": "bert-base-uncased",
+            "model_eng": "microsoft/deberta-v3-base",
             "model_arb": "UBC-NLP/MARBERTv2",
             "learning_rate": 2e-05,
             "num_train_epochs": 3,
-            "id_on_site": 447161
+            "id_on_site": 447912
         },
         "subtask_1": {
             "score": 0.68,
             "eng": {
+                "score": 0.74,
                 "eval_results": {
                     "eval_f1_macro": 0.756
                 }
             },
             "arb": {
+                "score": 0.5963,
                 "eval_results": {
-                    "eval_f1_macro": 0.80
+                    "eval_f1_macro": 0.8
                 }
             }
         },
         "subtask_2": {
             "score": 0.03,
             "eng": {
+                "score": 0.187,
                 "eval_results": {
                     "eval_f1_macro": 0.268
                 }
             },
             "arb": {
+                "score": 0.0324,
                 "eval_results": {
-                    "eval_f1_macro": 0.610
+                    "eval_f1_macro": 0.61
                 }
             }
         },
         "subtask_3": {
-            "score": 0.21,
+            "score": 0.4,
             "eng": {
+                "score": 0.2344,
                 "eval_results": {
                     "eval_f1_macro": 0.317
                 }
             },
             "arb": {
+                "score": 0.4016,
                 "eval_results": {
                     "eval_f1_macro": 0.486
                 }
@@ -117,79 +127,45 @@
         "subtask_1": {
             "score": 0.66,
             "eng": {
+                "score": 0.7718,
                 "eval_results": {
-                    "eval_loss": 0.49709340929985046,
-                    "eval_accuracy": 0.7705426356589147,
-                    "eval_f1_binary": 0.6696428571428571,
-                    "eval_f1_macro": 0.74693544282321,
-                    "eval_f1_micro": 0.7705426356589147,
-                    "eval_runtime": 1.242,
-                    "eval_samples_per_second": 519.311,
-                    "eval_steps_per_second": 65.216,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.74693544282321
                 }
             },
             "arb": {
+                "score": 0.6597,
                 "eval_results": {
-                    "eval_loss": 0.5320671200752258,
-                    "eval_accuracy": 0.7115384615384616,
-                    "eval_f1_binary": 0.6948356807511737,
-                    "eval_f1_macro": 0.7106716973180833,
-                    "eval_f1_micro": 0.7115384615384616,
-                    "eval_runtime": 2.3338,
-                    "eval_samples_per_second": 289.66,
-                    "eval_steps_per_second": 36.422,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.7106716973180833
                 }
             }
         },
         "subtask_2": {
             "score": 0.06,
             "eng": {
+                "score": 0.1612,
                 "eval_results": {
-                    "eval_loss": 0.49709340929985046,
-                    "eval_f1_macro": 0.1649313318428617,
-                    "eval_f1_micro": 0.5275142314990513,
-                    "eval_runtime": 1.242,
-                    "eval_samples_per_second": 519.311,
-                    "eval_steps_per_second": 65.216,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.1649313318428617
                 }
             },
             "arb": {
+                "score": 0.0646,
                 "eval_results": {
-                    "eval_loss": 0.5320671200752258,
-                    "eval_f1_macro": 0.1143635724331927,
-                    "eval_f1_micro": 0.19858156028368795,
-                    "eval_runtime": 2.3338,
-                    "eval_samples_per_second": 289.66,
-                    "eval_steps_per_second": 36.422,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.1143635724331927
                 }
             }
         },
         "subtask_3": {
             "score": 0.26,
             "eng": {
+                "score": 0.2978,
                 "eval_results": {
-                    "eval_loss": 0.49709340929985046,
-                    "eval_f1_macro": 0.2938462815302812,
-                    "eval_f1_micro": 0.36941410129096325,
-                    "eval_runtime": 1.242,
-                    "eval_samples_per_second": 519.311,
-                    "eval_steps_per_second": 65.216,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.2938462815302812
                 }
             },
             "arb": {
+                "score": 0.2553,
                 "eval_results": {
-                    "eval_loss": 0.5320671200752258,
-                    "eval_f1_macro": 0.3068775328177798,
-                    "eval_f1_micro": 0.4740827023878858,
-                    "eval_runtime": 2.3338,
-                    "eval_samples_per_second": 289.66,
-                    "eval_steps_per_second": 36.422,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.3068775328177798
                 }
             }
         }
@@ -212,78 +188,124 @@
         "subtask_1": {
             "arb": {
                 "eval_results": {
-                    "eval_loss": 0.4911883771419525,
-                    "eval_accuracy": 0.8091715976331361,
-                    "eval_f1_binary": 0.8048411497730711,
-                    "eval_f1_macro": 0.8090775936998496,
-                    "eval_f1_micro": 0.8091715976331361,
-                    "eval_runtime": 3.3041,
-                    "eval_samples_per_second": 204.597,
-                    "eval_steps_per_second": 25.726,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.8090775936998496
                 }
             },
             "eng": {
                 "eval_results": {
-                    "eval_loss": 0.47815200686454773,
-                    "eval_accuracy": 0.7751937984496124,
-                    "eval_f1_binary": 0.6813186813186813,
-                    "eval_f1_macro": 0.7538329933539514,
-                    "eval_f1_micro": 0.7751937984496124,
-                    "eval_runtime": 2.4363,
-                    "eval_samples_per_second": 264.746,
-                    "eval_steps_per_second": 33.247,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.7538329933539514
                 }
             }
         },
         "subtask_2": {
             "score": 0.38,
             "arb": {
+                "score": 0.3843,
                 "eval_results": {
-                    "eval_loss": 0.4911883771419525,
-                    "eval_f1_macro": 0.5169923091301157,
-                    "eval_f1_micro": 0.579520697167756,
-                    "eval_runtime": 3.3041,
-                    "eval_samples_per_second": 204.597,
-                    "eval_steps_per_second": 25.726,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.5169923091301157
                 }
             },
             "eng": {
+                "score": 0.1426,
                 "eval_results": {
-                    "eval_loss": 0.47815200686454773,
-                    "eval_f1_macro": 0.14004294801669298,
-                    "eval_f1_micro": 0.5263157894736843,
-                    "eval_runtime": 2.4363,
-                    "eval_samples_per_second": 264.746,
-                    "eval_steps_per_second": 33.247,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.14004294801669298
                 }
             }
         },
         "subtask_3": {
             "score": 0.37,
             "arb": {
+                "score": 0.3697,
                 "eval_results": {
-                    "eval_loss": 0.4911883771419525,
-                    "eval_f1_macro": 0.432488336994267,
-                    "eval_f1_micro": 0.6102683780630106,
-                    "eval_runtime": 3.3041,
-                    "eval_samples_per_second": 204.597,
-                    "eval_steps_per_second": 25.726,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.432488336994267
+                }
+            },
+            "eng": {
+                "score": 0.367,
+                "eval_results": {
+                    "eval_f1_macro": 0.3542418115939625
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "DSP0001S",
+        "metadata": {
+            "approach": "dspy basic",
+            "model": "ollama_chat/gemma3:12b"
+        },
+        "subtask_1": {
+            "score": null,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.7735584489912719
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "0000NG1",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8222222222222222
                 }
             },
             "eng": {
                 "eval_results": {
-                    "eval_loss": 0.47815200686454773,
-                    "eval_f1_macro": 0.3542418115939625,
-                    "eval_f1_micro": 0.4442553191489362,
-                    "eval_runtime": 2.4363,
-                    "eval_samples_per_second": 264.746,
-                    "eval_steps_per_second": 33.247,
-                    "epoch": 10.0
+                    "eval_f1_macro": 0.7916488358673776
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 15,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_eng": "microsoft/deberta-v3-base"
+        },
+        "subtask_2": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.3943146759286401
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.1407035175879397
+                }
+            }
+        },
+        "subtask_3": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.38416407256783786
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.1922514619883041
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MIPRODSP0001S",
+        "metadata": {
+            "approach": "dspy MIPROv2",
+            "student_model": "ollama_chat/gemma3:12b",
+            "teacher_model": "openai/gpt-5.1-2025-11-13"
+        },
+        "subtask_1": {
+            "score": null,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.7784664830119375
                 }
             }
         }
