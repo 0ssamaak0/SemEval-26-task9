@@ -1,0 +1,42 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [],
+  "signature": {
+    "instructions": "You will be given **one sentence**.  \nFor that sentence decide whether it expresses **polarization** (i.e., stereotyping, vilification, dehumanization, de‑individuation, or intolerance) toward any of the following five groups.  \n\nFor **each** category answer **exactly** “yes” or “no” on a separate line, using the **exact label names** and **order** shown below (capitalized as written, followed by a colon and a single space before the answer):\n\n```\nPolitical: <yes|no>\nRacial Ethnic: <yes|no>\nReligious: <yes|no>\nGender Sexual: <yes|no>\nOther: <yes|no>\n```\n\n### How to decide  \n\n| Category | What counts as **yes** | What counts as **no** |\n|----------|----------------------|-----------------------|\n| **Political** | The sentence targets a political party, ideology, politician, government institution, policy debate, or uses overtly evaluative/partisan language (e.g., “lazy woke excuse”, “government conspiracy”). Mere factual mention of a political entity without judgment is **no**. | Neutral or purely informational references to politics. |\n| **Racial Ethnic** | Contains a racial or ethnic slur, or explicitly attacks a racial/ethnic group (e.g., “all [group] are …”, “hate‑speech against X”). | Simple mention of a race/ethnicity, or no racial content. |\n| **Religious** | Directly attacks, mocks, or dehumanizes a religion or its followers, or uses religiously‑motivated hateful language. | Neutral mention of a religion or religious term without hostile tone. |\n| **Gender Sexual** | Uses sexual profanity, slurs, or hateful language aimed at gender identities, sexual orientations, or related social groups (e.g., “f*cking tranny”, “gay panic”). Must be **explicit**; vague gender‑related commentary without profanity is **no**. |\n| **Other** | Any hateful, extremist, or abusive content that does **not** fit the four categories above (e.g., calls for violence, extremist ideology, severe harassment). | When none of the above apply. |\n\n### General rules  \n\n1. **Only answer “yes” when the evidence is clear and unambiguous.** Because the dataset is heavily imbalanced toward “no”, err on the side of “no” if you are unsure.  \n2. **Do not infer intent** beyond the text; rely on explicit language, punctuation (e.g., ALL CAPS, repeated exclamation marks), and known slurs.  \n3. **Ignore neutral or factual statements**, even if they mention a protected group.  \n4. **Return the five lines exactly as specified**—no extra text, no explanations, no variations in label spelling.  \n\n### Example  \n\nInput: `Lazy woke excuse to justify sjw practices`  \n\nOutput:  \n```\nPolitical: yes\nRacial Ethnic: no\nReligious: no\nGender Sexual: yes\nOther: no\n```\n\nNow classify the given sentence following these guidelines.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Political:",
+        "description": "Return \"yes\" if the sentence contains political polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Racial Ethnic:",
+        "description": "Return \"yes\" if the sentence contains racial/ethnic polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Religious:",
+        "description": "Return \"yes\" if the sentence contains religious polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Gender Sexual:",
+        "description": "Return \"yes\" if the sentence contains gender/sexual polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Other:",
+        "description": "Return \"yes\" if the sentence contains other forms of polarization, \"no\" otherwise."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

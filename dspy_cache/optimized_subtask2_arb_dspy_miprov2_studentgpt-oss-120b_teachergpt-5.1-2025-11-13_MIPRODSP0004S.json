@@ -1,0 +1,79 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "٥ دقايق والتعادل السلبي وجانب دفاعي من بتروجيت ومحاولات من الاهلي",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "no",
+      "gender_sexual": "no",
+      "other": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "هي زعلت لية مش فاهم \nماهي وكل النسوان بيروحوا الجيم المختلط علشان يتم التحرش بيهم",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "no",
+      "gender_sexual": "yes",
+      "other": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "     عايشة الدور مع نفسك كلامي واضح كل حرف و رقم في القرآن لحكمة لكن هوس التكفير ذابحكم",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "yes",
+      "gender_sexual": "no",
+      "other": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "النادي الاهلي يفوز علي نادي الجونه بنتيجة ١١ - ٠ في دوري كرة القدم النسائيه",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "no",
+      "gender_sexual": "no",
+      "other": "no"
+    }
+  ],
+  "signature": {
+    "instructions": "**Task Overview**  \nYou are given a single short Arabic social‑media post (it may contain emojis, hashtags, line‑breaks, mixed‑script tokens, etc.; treat all such elements as *noise* and ignore them for the purpose of classification).  \nYour job is to decide, **independently for each of the five categories**, whether the post contains *polarizing / hateful* content directed at the target described by the category.  \n\n**Categories and what counts as “yes”**  \n\n| Category | Definition (what makes the answer “yes”) |\n|----------|-------------------------------------------|\n| **political** | The text attacks, vilifies, or incites against a political party, ideology, movement, government, political figure, or any political group. Includes propaganda, extremist rhetoric, or explicit calls for political violence. |\n| **racial_ethnic** | The text targets a race, ethnicity, nationality, tribe, or any group defined by ancestry or skin‑color. Includes slurs, stereotypes, dehumanizing language, or calls for harm based on these traits. |\n| **religious** | The text attacks, blasphemes, or incites hostility toward a religious group, belief system, sacred figure, or practice. Includes demeaning remarks about a faith, calls for religious violence, or hateful language about religious identity. |\n| **gender_sexual** | The text targets gender identity, sexual orientation, or related groups (e.g., women, men, LGBTQ+ persons). Includes misogyny, sexism, homophobia, transphobia, harassment, or any language that devalues or threatens these groups. |\n| **other** | Any hateful, abusive, or threatening language that does **not** fall cleanly into the four categories above (e.g., ageism, ableism, general profanity that is meant to intimidate, or novel forms of hate). |\n\n**General Rules**\n\n1. **One‑sentence focus** – Evaluate the *overall meaning* of the given sentence. Do **not** let punctuation, emojis, hashtags, or line‑breaks influence the decision; they are treated as decorative noise.\n2. **Binary decision** – For each category answer **exactly** “yes” or **exactly** “no”. Do not add extra words, explanations, or punctuation.\n3. **Multiple labels possible** – A sentence may receive “yes” for more than one category, but in this dataset multi‑label cases are rare (usually only political together with another label). Still, evaluate each category independently.\n4. **Sparse “other”** – The “other” category is rarely triggered; answer “yes” only when you are confident the content is hateful/abusive and does not fit the four main categories.\n5. **Output format** – Return the result in the exact same layout shown in the examples, preserving the order of categories. Use a capitalized label followed by a colon and a single space, then “yes” or “no”. Do **not** add extra lines or text.\n\n**Output template**\n\n```\nSentence: <the original sentence exactly as provided>\nPolitical: <yes|no>\nRacial Ethnic: <yes|no>\nReligious: <yes|no>\nGender Sexual: <yes|no>\nOther: <yes|no>\n```\n\n**Example**\n\n```\nSentence: هي زعلت لية مش فاهم \nماهي وكل النسوان بيروحوا الجيم المختلط علشان يتم التحرش بيهم\nPolitical: no\nRacial Ethnic: no\nReligious: no\nGender Sexual: yes\nOther: no\n```\n\n**Your task**: Follow the definitions, apply the rules, and produce the answer in the exact format above for every input sentence.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Political:",
+        "description": "Return \"yes\" if the sentence contains political polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Racial Ethnic:",
+        "description": "Return \"yes\" if the sentence contains racial/ethnic polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Religious:",
+        "description": "Return \"yes\" if the sentence contains religious polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Gender Sexual:",
+        "description": "Return \"yes\" if the sentence contains gender/sexual polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Other:",
+        "description": "Return \"yes\" if the sentence contains other forms of polarization, \"no\" otherwise."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

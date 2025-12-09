@@ -1,0 +1,45 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "البادي اظلم هنن قامو ا ضد الدولة وقتلوا شباب الأمن العام غدر هي خيانة كبرى زعزعة الأمن",
+      "polarization": "polarization"
+    },
+    {
+      "augmented": true,
+      "sentence": "شكيد شريف هذا ولك شحدك توصل للكاظم شخص مسالم معليه من احد",
+      "polarization": "no polarization"
+    },
+    {
+      "sentence": "صوت نانسي مخل و هيفاء فنانه كبيرة سوبهان الله 😂",
+      "polarization": "no polarization"
+    },
+    {
+      "sentence": "سيبك انه علم الطاقة اللي انت قصدك عليه هو مش دارسه ..فمش فارقة ... للأسف هو بيقول اي كلام يبان انه منطقي و مفيد و هو كلام فاضي هجص ",
+      "polarization": "no polarization"
+    }
+  ],
+  "signature": {
+    "instructions": "You are given a single Arabic sentence (it may contain line‑breaks, extra punctuation, elongated characters, emojis, or URLs).  \nClassify the sentence **as “polarization”** if **any** of the following characteristics are present:\n\n* Hostile, judgmental or hateful language toward a group, individual, belief, or identity.  \n* Derogatory noun phrases that often start with the definite article “ال” (e.g., “الـ…”) used as slurs.  \n* Imperatives, rallying calls, or slogans that encourage aggression, exclusion, or de‑humanization (e.g., “قاطعوا …”, “هيا نقتل …”).  \n* Explicit calls for violence, threats, or incitement to conflict.  \n* Sectarian, extremist, or ultra‑nationalist expressions that vilify “the other”.  \n* Intensified laughter, repeated punctuation, elongated letters, or long emoji sequences that accompany hateful content.  \n\nLabel the sentence **as “no polarization”** if it is neutral, factual, or benign, i.e., it:\n\n* Uses standard Arabic syntax and formal connective particles.  \n* Contains only objective information such as numbers, dates, URLs, or straightforward descriptions.  \n* Lacks slurs, threats, hate‑speech cues, or rallying language.  \n* Is cleanly formatted without excessive punctuation or character stretching.\n\n**Output requirement:** Return **only** one of the two exact strings:  \n\n```\npolarization\n```\nor  \n```\nno polarization\n```\n\nDo not add any additional text, explanations, or punctuation.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Polarization:",
+        "description": "Return \"polarization\" or \"no polarization\"."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

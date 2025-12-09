@@ -1,0 +1,26 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [],
+  "signature": {
+    "instructions": "Polarization refers to language that promotes division, hatred, or intolerance, often through emotionally charged, accusatory, or dehumanizing expressions, particularly targeting political figures or ideologies. Neutral, factual, or journalistic statements are considered non-polarized. Given a sentence, determine whether it contains polarization by analyzing its tone, language intensity, and framing. Classify the sentence as either \"polarization\" or \"no polarization\" based on these criteria.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Polarization:",
+        "description": "Return \"polarization\" or \"no polarization\"."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

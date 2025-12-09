@@ -1,0 +1,46 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [],
+  "signature": {
+    "instructions": "Polarization techniques are specific rhetorical strategies used to create division and intolerance.\n\nGiven a sentence, classify it for the presence of the following polarization techniques:\n- stereotype: Generalizing negative traits to an entire group\n- vilification: Attacking the character or reputation of a group or individual\n- dehumanization: Portraying people as less than human, using animalistic or objectifying language\n- extreme_language: Using exaggerated, inflammatory, or hyperbolic language\n- lack_of_empathy: Dismissing or ignoring the suffering or concerns of others\n- invalidation: Denying the legitimacy of others' experiences, beliefs, or identities\n\nFor each technique, output \"yes\" if the sentence uses that technique, \"no\" otherwise.\nA sentence can use multiple techniques or none at all.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Stereotype:",
+        "description": "Return \"yes\" if the sentence contains stereotyping, \"no\" otherwise."
+      },
+      {
+        "prefix": "Vilification:",
+        "description": "Return \"yes\" if the sentence contains vilification, \"no\" otherwise."
+      },
+      {
+        "prefix": "Dehumanization:",
+        "description": "Return \"yes\" if the sentence contains dehumanization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Extreme Language:",
+        "description": "Return \"yes\" if the sentence contains extreme/inflammatory language, \"no\" otherwise."
+      },
+      {
+        "prefix": "Lack Of Empathy:",
+        "description": "Return \"yes\" if the sentence shows lack of empathy, \"no\" otherwise."
+      },
+      {
+        "prefix": "Invalidation:",
+        "description": "Return \"yes\" if the sentence contains invalidation, \"no\" otherwise."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

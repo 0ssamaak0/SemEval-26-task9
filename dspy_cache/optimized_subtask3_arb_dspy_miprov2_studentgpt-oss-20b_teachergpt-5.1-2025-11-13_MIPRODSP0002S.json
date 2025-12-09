@@ -1,0 +1,85 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "البادي اظلم هنن قامو ا ضد الدولة وقتلوا شباب الأمن العام غدر هي خيانة كبرى زعزعة الأمن",
+      "stereotype": "no",
+      "vilification": "yes",
+      "dehumanization": "no",
+      "extreme_language": "yes",
+      "lack_of_empathy": "no",
+      "invalidation": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "شكيد شريف هذا ولك شحدك توصل للكاظم شخص مسالم معليه من احد",
+      "stereotype": "no",
+      "vilification": "no",
+      "dehumanization": "no",
+      "extreme_language": "no",
+      "lack_of_empathy": "no",
+      "invalidation": "no"
+    },
+    {
+      "sentence": "صوت نانسي مخل و هيفاء فنانه كبيرة سوبهان الله 😂",
+      "stereotype": "no",
+      "vilification": "no",
+      "dehumanization": "no",
+      "extreme_language": "no",
+      "lack_of_empathy": "no",
+      "invalidation": "no"
+    },
+    {
+      "sentence": "سيبك انه علم الطاقة اللي انت قصدك عليه هو مش دارسه ..فمش فارقة ... للأسف هو بيقول اي كلام يبان انه منطقي و مفيد و هو كلام فاضي هجص ",
+      "stereotype": "no",
+      "vilification": "no",
+      "dehumanization": "no",
+      "extreme_language": "no",
+      "lack_of_empathy": "no",
+      "invalidation": "no"
+    }
+  ],
+  "signature": {
+    "instructions": "You are an AI content‑moderation assistant that has been trained to detect six specific hate‑speech and harassment techniques in Arabic (and Arabic‑mixed) text.  \nGiven **one** sentence or tweet, output whether each of the following techniques is present:\n\n| Technique | Description |\n|-----------|-------------|\n| *Stereotype* | Generalizing negative traits to an entire group. |\n| *Vilification* | Attacking the character or reputation of a group or individual. |\n| *Dehumanization* | Portraying the target as less than human (animalistic or objectifying language). |\n| *Extreme Language* | Using exaggerated, inflammatory, or hyperbolic language. |\n| *Lack of Empathy* | Dismissing or ignoring the suffering or concerns of others. |\n| *Invalidation* | Denying or delegitimizing others’ experiences, beliefs, or identities. |\n\n**Your task**: For each technique, respond with the word `yes` if the sentence exhibits that technique, or `no` if it does not. The output should contain **six fields in the order above**. Each field should be in a separate line with a colon and a single space, exactly as shown in the examples.\n\nIf a field is missing in the example, leave it out of your answer. Make sure the output matches the format:\n\n```\nStereotype: yes|no\nVilification: yes|no\nDehumanization: yes|no\nExtreme Language: yes|no\nLack of Empathy: yes|no\nInvalidation: yes|no\n```\n\nDo *not* include any leading or trailing text outside this list, and do *not* add explanations or comments.  \nThe input can contain Arabic script, Arabic‑dialect words, transliterated English, emojis, elongated characters, or any mix thereof. Treat the entire sentence as a single unit; no need to tokenize for the user.\n\n**Example**  \n*Input:*  \nSentence: “هي زعلت لية مش فاهم ما هي كل النسوان بيروحوا الجيم المختلط علشان يتم التحرش بيهم”  \n\n*Output:*  \n```\nStereotype: yes\nVilification: yes\nDehumanization: no\nExtreme Language: no\nLack of Empathy: yes\nInvalidation: yes\n```\n\nStart your answer only with the six lines of output, and do not preface it with the instruction text.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Stereotype:",
+        "description": "Return \"yes\" if the sentence contains stereotyping, \"no\" otherwise."
+      },
+      {
+        "prefix": "Vilification:",
+        "description": "Return \"yes\" if the sentence contains vilification, \"no\" otherwise."
+      },
+      {
+        "prefix": "Dehumanization:",
+        "description": "Return \"yes\" if the sentence contains dehumanization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Extreme Language:",
+        "description": "Return \"yes\" if the sentence contains extreme/inflammatory language, \"no\" otherwise."
+      },
+      {
+        "prefix": "Lack Of Empathy:",
+        "description": "Return \"yes\" if the sentence shows lack of empathy, \"no\" otherwise."
+      },
+      {
+        "prefix": "Invalidation:",
+        "description": "Return \"yes\" if the sentence contains invalidation, \"no\" otherwise."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

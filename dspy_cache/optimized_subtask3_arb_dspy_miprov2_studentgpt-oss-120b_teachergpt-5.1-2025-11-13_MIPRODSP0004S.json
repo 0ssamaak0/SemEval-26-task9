@@ -1,0 +1,87 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "٥ دقايق والتعادل السلبي وجانب دفاعي من بتروجيت ومحاولات من الاهلي",
+      "stereotype": "no",
+      "vilification": "no",
+      "dehumanization": "no",
+      "extreme_language": "no",
+      "lack_of_empathy": "no",
+      "invalidation": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "هي زعلت لية مش فاهم \nماهي وكل النسوان بيروحوا الجيم المختلط علشان يتم التحرش بيهم",
+      "stereotype": "yes",
+      "vilification": "yes",
+      "dehumanization": "no",
+      "extreme_language": "no",
+      "lack_of_empathy": "yes",
+      "invalidation": "yes"
+    },
+    {
+      "augmented": true,
+      "sentence": "     عايشة الدور مع نفسك كلامي واضح كل حرف و رقم في القرآن لحكمة لكن هوس التكفير ذابحكم",
+      "stereotype": "no",
+      "vilification": "yes",
+      "dehumanization": "no",
+      "extreme_language": "yes",
+      "lack_of_empathy": "yes",
+      "invalidation": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "النادي الاهلي يفوز علي نادي الجونه بنتيجة ١١ - ٠ في دوري كرة القدم النسائيه",
+      "stereotype": "no",
+      "vilification": "no",
+      "dehumanization": "no",
+      "extreme_language": "no",
+      "lack_of_empathy": "no",
+      "invalidation": "no"
+    }
+  ],
+  "signature": {
+    "instructions": "You are given a short, noisy Arabic social‑media post (it may contain slang, emojis, excessive punctuation, mixed Arabic/Latin script, or all‑caps words).  \nFor this post decide whether each of the following six **polarization techniques** is present.  \nAnswer **only** with the exact layout shown in the examples (one line per field, the answer must be the word `yes` or `no` in lowercase).\n\n**Techniques and how to recognise them**\n\n| Technique | What to look for | Typical cues |\n|-----------|------------------|--------------|\n| **stereotype** | The sentence attributes a negative, generalized trait, behavior or belief to an entire social group (e.g., based on gender, nationality, religion, ethnicity, age, etc.). | Words like “all …”, “always …”, or collective nouns referring to a group, followed by a negative judgment. |\n| **vilification** | The sentence attacks, condemns, or calls for harm against a target (person, group, or ideology). | Strongly negative verbs, threats, curses, or calls for punishment directed at the target. |\n| **dehumanization** | The sentence treats the target as less than human, equating them with animals, objects, diseases, or other non‑human entities. | Phrases such as “they are rats”, “they are garbage”, “they are like a virus”, etc. |\n| **extreme_language** | The sentence uses harsh, aggressive, hateful, or hyperbolic wording that intensifies the tone. This includes profanity, all‑caps Latin words, excessive punctuation (!!!, ???), shouting emojis (😡🔥), or any orthographic intensifier. | Any of the above visual cues, even if the content is not targeting a specific group. |\n| **lack_of_empathy** | The sentence shows indifference, dismisses, or trivialises the feelings, suffering, or concerns of others. | Phrases like “who cares”, “they’re overreacting”, “it’s not a big deal”, etc. |\n| **invalidation** | The sentence denies, rejects, or trivialises the lived experiences, identities, or viewpoints of a group or individual. | Statements such as “they’re making it up”, “they’re lying”, “their problems are imagined”, etc. |\n\n**Output format**\n\n```\nSentence: <the original sentence exactly as provided>\nStereotype: yes/no\nVilification: yes/no\nDehumanization: yes/no\nExtreme Language: yes/no\nLack Of Empathy: yes/no\nInvalidation: yes/no\n```\n\n**Guidelines**\n\n1. **Consider every label independently** – a sentence can have any combination of `yes`/`no` answers.\n2. If a cue is ambiguous but leans toward the definition, mark it as `yes`; otherwise mark `no`.\n3. Do **not** add any extra text, explanations, or punctuation beyond the required lines.\n4. Preserve the original Arabic sentence (including any emojis, punctuation, or Latin characters) exactly after `Sentence:`.\n\n**Example**\n\n```\nSentence: هي زعلت لية مش فاهم ماهي وكل النسوان بيروحوا الجيم المختلط علشان يتم التحرش بيهم\nStereotype: yes\nVilification: yes\nDehumanization: no\nExtreme Language: no\nLack Of Empathy: yes\nInvalidation: yes\n```\n\nNow, process the given sentence and output the six decisions in the format above.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Stereotype:",
+        "description": "Return \"yes\" if the sentence contains stereotyping, \"no\" otherwise."
+      },
+      {
+        "prefix": "Vilification:",
+        "description": "Return \"yes\" if the sentence contains vilification, \"no\" otherwise."
+      },
+      {
+        "prefix": "Dehumanization:",
+        "description": "Return \"yes\" if the sentence contains dehumanization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Extreme Language:",
+        "description": "Return \"yes\" if the sentence contains extreme/inflammatory language, \"no\" otherwise."
+      },
+      {
+        "prefix": "Lack Of Empathy:",
+        "description": "Return \"yes\" if the sentence shows lack of empathy, \"no\" otherwise."
+      },
+      {
+        "prefix": "Invalidation:",
+        "description": "Return \"yes\" if the sentence contains invalidation, \"no\" otherwise."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

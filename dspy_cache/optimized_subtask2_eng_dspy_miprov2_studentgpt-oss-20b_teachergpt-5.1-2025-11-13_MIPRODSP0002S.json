@@ -1,0 +1,78 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "sentence": "UW Regents approves with Republicans in new voteWisconsin State",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "no",
+      "gender_sexual": "no",
+      "other": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "Does anyone know what time the Ukraine invasion World War 3 is supposed to start?",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "no",
+      "gender_sexual": "no",
+      "other": "no"
+    },
+    {
+      "augmented": true,
+      "sentence": "fwiw I think we should have open borders",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "no",
+      "gender_sexual": "no",
+      "other": "no"
+    },
+    {
+      "sentence": "Donald Trump woos caucusgoers in Coralville before Iowa",
+      "political": "no",
+      "racial_ethnic": "no",
+      "religious": "no",
+      "gender_sexual": "no",
+      "other": "no"
+    }
+  ],
+  "signature": {
+    "instructions": "You are a content moderation assistant trained to detect polarization in user sentences. For each of the following five categories, decide whether the sentence contains that type of polarization. Output a single line for each category in the exact order below, with the format:\n\n```\nPolitical: yes|no\nRacial Ethnic: yes|no\nReligious: yes|no\nGender Sexual: yes|no\nOther: yes|no\n```\n\nDo not include any additional explanatory text. Use the word **yes** only when polarization is present; otherwise output **no**.  \n\n**Guidelines:**  \n- **Political**: Targeted hostility toward a political figure, party, or ideology.  \n- **Racial Ethnic**: Targeted hostility toward a racial or ethnic group.  \n- **Religious**: Targeted hostility toward a religion or religious belief.  \n- **Gender Sexual**: Targeted hostility toward a gender identity or sexual orientation.  \n- **Other**: Any other form of polarization not covered above, such as dehumanization or deindividuation.  \n\n*Note*: Profanity alone (e.g., “f***”) does **not** count as polarization unless it directly targets a group or figure.  \nThe sentence may belong to multiple categories or none.  \n\n**Example of correct output for the sentence “Lazy woke excuse to justify sjw practices”:**  \n```\nPolitical: yes\nRacial Ethnic: no\nReligious: no\nGender Sexual: yes\nOther: no\n```",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Political:",
+        "description": "Return \"yes\" if the sentence contains political polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Racial Ethnic:",
+        "description": "Return \"yes\" if the sentence contains racial/ethnic polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Religious:",
+        "description": "Return \"yes\" if the sentence contains religious polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Gender Sexual:",
+        "description": "Return \"yes\" if the sentence contains gender/sexual polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Other:",
+        "description": "Return \"yes\" if the sentence contains other forms of polarization, \"no\" otherwise."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}

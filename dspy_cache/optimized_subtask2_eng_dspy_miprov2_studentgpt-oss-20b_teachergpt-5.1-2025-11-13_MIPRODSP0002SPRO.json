@@ -1,0 +1,42 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [],
+  "signature": {
+    "instructions": "Polarization denotes stereotyping, vilification, dehumanization, deindividuation, or intolerance of other people's views, beliefs, and identities.\n\nGiven a sentence, classify it into one or more polarization categories:\n- political: Political polarization targeting political groups, parties, ideologies, or political figures\n- racial_ethnic: Racial or ethnic polarization targeting racial or ethnic groups\n- religious: Religious polarization targeting religious groups or beliefs\n- gender_sexual: Gender or sexual polarization targeting gender identities or sexual orientations\n- other: Other forms of polarization not covered by the above categories\n\nFor each category, output \"yes\" if the sentence contains that type of polarization, \"no\" otherwise.\nA sentence can belong to multiple categories or none at all.",
+    "fields": [
+      {
+        "prefix": "Sentence:",
+        "description": "${sentence}"
+      },
+      {
+        "prefix": "Political:",
+        "description": "Return \"yes\" if the sentence contains political polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Racial Ethnic:",
+        "description": "Return \"yes\" if the sentence contains racial/ethnic polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Religious:",
+        "description": "Return \"yes\" if the sentence contains religious polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Gender Sexual:",
+        "description": "Return \"yes\" if the sentence contains gender/sexual polarization, \"no\" otherwise."
+      },
+      {
+        "prefix": "Other:",
+        "description": "Return \"yes\" if the sentence contains other forms of polarization, \"no\" otherwise."
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.4",
+      "cloudpickle": "3.1"
+    }
+  }
+}
