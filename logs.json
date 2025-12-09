@@ -711,5 +711,97 @@
                 }
             }
         }
+    },
+    {
+        "trial_id": "GT000003",
+        "subtask_1": {
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.44293421506881714,
+                    "eval_accuracy": null,
+                    "eval_f1_binary": null,
+                    "eval_f1_macro": 0.7958779336480286,
+                    "eval_f1_micro": null,
+                    "eval_runtime": 1.4268,
+                    "eval_samples_per_second": 452.061,
+                    "eval_steps_per_second": 28.736,
+                    "epoch": 15.0
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.46620678901672363,
+                    "eval_accuracy": null,
+                    "eval_f1_binary": null,
+                    "eval_f1_macro": 0.8164073451079339,
+                    "eval_f1_micro": null,
+                    "eval_runtime": 1.0006,
+                    "eval_samples_per_second": 675.606,
+                    "eval_steps_per_second": 42.975,
+                    "epoch": 15.0
+                }
+            }
+        },
+        "metadata": {
+            "model_eng": "microsoft/deberta-v3-base",
+            "approach": "MTL_Gated",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 15,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "id_on_site": 450377
+        },
+        "subtask_2": {
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.44293421506881714,
+                    "eval_f1_macro": 0.14299065420560747,
+                    "eval_f1_micro": null,
+                    "eval_runtime": 1.4268,
+                    "eval_samples_per_second": 452.061,
+                    "eval_steps_per_second": 28.736,
+                    "epoch": 15.0
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.46620678901672363,
+                    "eval_f1_macro": 0.6075830494043218,
+                    "eval_f1_micro": null,
+                    "eval_runtime": 1.0006,
+                    "eval_samples_per_second": 675.606,
+                    "eval_steps_per_second": 42.975,
+                    "epoch": 15.0
+                }
+            }
+        },
+        "subtask_3": {
+            "eng": {
+                "eval_results": {
+                    "eval_loss": 0.44293421506881714,
+                    "eval_f1_macro": 0.3834128055180687,
+                    "eval_f1_micro": null,
+                    "eval_runtime": 1.4268,
+                    "eval_samples_per_second": 452.061,
+                    "eval_steps_per_second": 28.736,
+                    "epoch": 15.0
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_loss": 0.46620678901672363,
+                    "eval_f1_macro": 0.5298895339718985,
+                    "eval_f1_micro": null,
+                    "eval_runtime": 1.0006,
+                    "eval_samples_per_second": 675.606,
+                    "eval_steps_per_second": 42.975,
+                    "epoch": 15.0
+                }
+            }
+        }
     }
 ]
