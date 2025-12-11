@@ -1,3 +1,16 @@
+# slides
+Shared-encoder multi-task learning (MTL)
+Shared-Encoder Multi-Task Learning with Strict Hierarchical Inference
+Strict Hierarchical Gated Multitask learning
+Hierarchically-Gated Multi-Task Learning with a Shared Encoder (HG-MTL)
+
+We follow the general line of hierarchical multi-task learning where a shared encoder feeds multiple task-specific heads for related subtasks, as in hierarchical text classification and hate-speech systems.
+Our setup is closest to AlKhamissi & Diab (2022), who jointly model offensive language, hate speech, and fine-grained hate categories with shared parameters and apply a self-consistency correction step over the hierarchy of subtasks.
+Similar ideas of hierarchy-aware or conditional multi-task prediction appear in hierarchical patent classification with multi-task transformers  ￼ and in conditional multi-task toxicity detection  ￼.
+We adopt a particularly strict hierarchical gating: if the top-level “polarized vs. non-polarized” head predicts non-polarized, we zero out all lower-level type and manifestation labels, enforcing hierarchy consistency at inference time.
+
+
+
 # Ideas
 - Use AlDi to visualize train data ✅
 - ARBERT: MSA & MARBERT: Dialects (Merging?)

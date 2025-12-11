@@ -1,1 +1,4 @@
 # dev_phase/
+*.safetensors
+runs/
+checkpoint-*/

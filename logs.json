@@ -697,6 +697,25 @@
         }
     },
     {
+        "trial_id": "ensemble",
+        "metadata": {
+            "approach": "no gate ensemble",
+            "model_1": "marbert",
+            "model_2": "arbert",
+            "safe mixture": false,
+            "id_on_site": 452557
+        },
+        "subtask_1": {
+            "score": 0.69
+        },
+        "subtask_2": {
+            "score": 0.48
+        },
+        "subtask_3": {
+            "score": 0.4
+        }
+    },
+    {
         "trial_id": "MIPRODSP0002SPRO",
         "metadata": {
             "approach": "dspy MIPROv2",
@@ -800,6 +819,129 @@
                     "eval_samples_per_second": 675.606,
                     "eval_steps_per_second": 42.975,
                     "epoch": 15.0
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MARBERTAUG_FULL",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.9484126984126984
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8339082431957979
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 15,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "id_on_site": 452660,
+            "model_eng": "cardiffnlp/twitter-roberta-base"
+        },
+        "subtask_2": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5629565217391305
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.43077061850162474
+                }
+            }
+        },
+        "subtask_3": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6913576761402848
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5250862554181749
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "ARBERTAUG_FULL",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8792802262432113
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/ARBERTv2",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 15,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "id_on_site": 452622
+        },
+        "subtask_2": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.7062058892380343
+                }
+            }
+        },
+        "subtask_3": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6458400333640993
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MARBERTAUG_80",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8826049827965012
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 15,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true
+        },
+        "subtask_2": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.704304780164591
+                }
+            }
+        },
+        "subtask_3": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6501506679125233
                 }
             }
         }
