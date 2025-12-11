@@ -5,6 +5,9 @@
 - Adapters? 
 - Aux task learning e.g., Sentiment?
 
+# MLT No gate
+https://gemini.google.com/app/e857eeb52a287c91
+
 
 # Dsearchers
 - Gemini: https://gemini.google.com/share/c0a27c2a3eeb
