@@ -17,8 +17,8 @@ from src.logging_utils import log_experiment_results
 from src.thresholds import find_optimal_thresholds
 
 # ============ CONFIGURATION ============
-languages = ["arb"]
-model_names = [MODEL_NAMES[1]]
+languages = ["arb", "eng"]
+model_names = [MODEL_NAMES[1], MODEL_NAMES[-1]]
 trial_id = "MTL_run"
 # languages[i] pairs with model_names[i]
 # =======================================
