@@ -37,9 +37,9 @@ def get_label_columns(df):
 
 def load_data(lang, augmentation=True, data_dir="./dev_phase"):
     if augmentation:
-        train_1 = pd.read_csv(f"{data_dir}/subtask1/train/{lang}_augmented.csv")
-        train_2 = pd.read_csv(f"{data_dir}/subtask2/train/{lang}_augmented.csv")
-        train_3 = pd.read_csv(f"{data_dir}/subtask3/train/{lang}_augmented.csv")
+        train_1 = pd.read_csv(f"{data_dir}/subtask1/train/{lang}_augmented1.csv")
+        train_2 = pd.read_csv(f"{data_dir}/subtask2/train/{lang}_augmented1.csv")
+        train_3 = pd.read_csv(f"{data_dir}/subtask3/train/{lang}_augmented1.csv")
     else:
         train_1 = pd.read_csv(f"{data_dir}/subtask1/train/{lang}.csv")
         train_2 = pd.read_csv(f"{data_dir}/subtask2/train/{lang}.csv")
