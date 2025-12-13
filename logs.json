@@ -945,5 +945,193 @@
                 }
             }
         }
+    },
+    {
+        "trial_id": "MTL_10epochs_full",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.840214308225654
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.822230615658555
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_eng": "cardiffnlp/twitter-roberta-base-hate-latest",
+            "id_on_site": 454370
+        },
+        "subtask_2": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5551501728147148
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.503232208713393
+                }
+            }
+        },
+        "subtask_3": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5733462758890745
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.4827627244559791
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MTL_10epochs_full_1",
+        "subtask_1": {
+            "eng": {
+                "score": 0.73,
+                "eval_results": {
+                    "eval_f1_macro": 0.8041954042708941
+                }
+            }
+        },
+        "metadata": {
+            "model_eng": "vinai/bertweet-base",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "id_on_site": 454390
+        },
+        "subtask_2": {
+            "eng": {
+                "score": 0.3,
+                "eval_results": {
+                    "eval_f1_macro": 0.3411265697524055
+                }
+            }
+        },
+        "subtask_3": {
+            "eng": {
+                "score": 0.45,
+                "eval_results": {
+                    "eval_f1_macro": 0.5001444640225094
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MTL_10epochs_full_2",
+        "subtask_1": {
+            "score": 0.8,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.840696564885496
+                }
+            }
+        },
+        "metadata": {
+            "model_eng": "cardiffnlp/twitter-roberta-base-hate",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "id_on_site": 454405
+        },
+        "subtask_2": {
+            "score": 0.41,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.40108720414567484
+                }
+            }
+        },
+        "subtask_3": {
+            "score": 0.5,
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5165629730973345
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MTL_10epochs_full_soft_gating",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "score": 80.8,
+                    "eval_f1_macro": 0.9021267016261455
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "score": 78.2,
+                    "eval_f1_macro": 0.8460580912863072
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": true,
+            "model_eng": "cardiffnlp/twitter-roberta-base-hate",
+            "trial_id": 454419
+        },
+        "subtask_2": {
+            "arb": {
+                "eval_results": {
+                    "score": 56.2,
+                    "eval_f1_macro": 0.6346624198146829
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "score": 41.6,
+                    "eval_f1_macro": 0.5060956477732793
+                }
+            }
+        },
+        "subtask_3": {
+            "arb": {
+                "score": 57.0,
+                "eval_results": {
+                    "eval_f1_macro": 0.6159412105095522
+                }
+            },
+            "eng": {
+                "score": 49.84,
+                "eval_results": {
+                    "eval_f1_macro": 0.5452917144762014
+                }
+            }
+        }
     }
 ]
