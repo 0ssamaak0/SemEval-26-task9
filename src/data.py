@@ -35,15 +35,20 @@ def get_label_columns(df):
     return [col for col in df.columns if col not in ["id", "text"]]
 
 
-def load_data(lang, data_dir="./dev_phase"):
-    train_1 = pd.read_csv(f"{data_dir}/subtask1/train/{lang}_augmented.csv")
-    train_2 = pd.read_csv(f"{data_dir}/subtask2/train/{lang}_augmented.csv")
-    train_3 = pd.read_csv(f"{data_dir}/subtask3/train/{lang}_augmented.csv")
+def load_data(lang, augmentation=True, data_dir="./dev_phase"):
+    if augmentation:
+        train_1 = pd.read_csv(f"{data_dir}/subtask1/train/{lang}_augmented.csv")
+        train_2 = pd.read_csv(f"{data_dir}/subtask2/train/{lang}_augmented.csv")
+        train_3 = pd.read_csv(f"{data_dir}/subtask3/train/{lang}_augmented.csv")
+    else:
+        train_1 = pd.read_csv(f"{data_dir}/subtask1/train/{lang}.csv")
+        train_2 = pd.read_csv(f"{data_dir}/subtask2/train/{lang}.csv")
+        train_3 = pd.read_csv(f"{data_dir}/subtask3/train/{lang}.csv")
     return train_1, train_2, train_3
 
 
 def prepare_datasets(
-    train_1, train_2, train_3, tokenizer, test_size=0.10, random_state=42
+    train_1, train_2, train_3, tokenizer, test_size=0.20, random_state=42
 ):
     n_samples = len(train_1)
     indices = np.arange(n_samples)

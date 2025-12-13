@@ -2,7 +2,17 @@ import json
 from logs import log
 
 
-def log_experiment_results(eval_results, trial_id, lang, model_name, training_args, num_types, num_manifestations, datasets_merge=None):
+def log_experiment_results(
+    eval_results,
+    trial_id,
+    lang,
+    model_name,
+    training_args,
+    num_types,
+    num_manifestations,
+    thresholds=None,
+    datasets_merge=None,
+):
     experiment_metadata = {
         "approach": "MTL_no_gate",
         f"model_{lang}": model_name,
@@ -13,8 +23,11 @@ def log_experiment_results(eval_results, trial_id, lang, model_name, training_ar
         "num_types": num_types,
         "num_manifestations": num_manifestations,
         "datasets_merge": datasets_merge,
-        "posweight": "True"
+        "posweight": "True",
     }
+
+    if thresholds is not None:
+        experiment_metadata["thresholds"] = thresholds
 
     subtask_1_results = {
         "eval_f1_macro": eval_results.get("eval_subtask_1/f1_macro"),
@@ -40,24 +53,29 @@ def log_experiment_results(eval_results, trial_id, lang, model_name, training_ar
         pass
 
     merged_metadata = dict(existing_metadata)
-    merged_metadata.update({
+    update_dict = {
         f"model_{lang}": model_name,
         "approach": experiment_metadata["approach"],
         "learning_rate": experiment_metadata["learning_rate"],
         "num_train_epochs": experiment_metadata["num_train_epochs"],
-        "per_device_train_batch_size": experiment_metadata["per_device_train_batch_size"],
+        "per_device_train_batch_size": experiment_metadata[
+            "per_device_train_batch_size"
+        ],
         "per_device_eval_batch_size": experiment_metadata["per_device_eval_batch_size"],
         "num_types": experiment_metadata["num_types"],
         "num_manifestations": experiment_metadata["num_manifestations"],
-        "datasets_merge": experiment_metadata["datasets_merge"]
-    })
+        "datasets_merge": experiment_metadata["datasets_merge"],
+    }
+    if thresholds is not None:
+        update_dict["thresholds"] = thresholds
+    merged_metadata.update(update_dict)
 
     log(
         subtask_name="subtask_1",
         language=lang,
         eval_results=subtask_1_results,
         metadata=merged_metadata,
-        trial_id=trial_id
+        trial_id=trial_id,
     )
 
     log(
@@ -65,7 +83,7 @@ def log_experiment_results(eval_results, trial_id, lang, model_name, training_ar
         language=lang,
         eval_results=subtask_2_results,
         metadata=None,
-        trial_id=trial_id
+        trial_id=trial_id,
     )
 
     log(
@@ -73,7 +91,7 @@ def log_experiment_results(eval_results, trial_id, lang, model_name, training_ar
         language=lang,
         eval_results=subtask_3_results,
         metadata=None,
-        trial_id=trial_id
+        trial_id=trial_id,
     )
 
     print(f"\n✓ Experiment results logged to logs.json (trial_id: {trial_id})")

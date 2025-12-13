@@ -1081,8 +1081,7 @@
         "subtask_1": {
             "arb": {
                 "eval_results": {
-                    "score": 80.8,
-                    "eval_f1_macro": 0.9021267016261455
+                    "eval_f1_macro": 0.8865896727426932
                 }
             },
             "eng": {
@@ -1101,15 +1100,14 @@
             "per_device_eval_batch_size": 16,
             "num_types": 5,
             "num_manifestations": 6,
-            "datasets_merge": true,
+            "datasets_merge": null,
             "model_eng": "cardiffnlp/twitter-roberta-base-hate",
             "trial_id": 454419
         },
         "subtask_2": {
             "arb": {
                 "eval_results": {
-                    "score": 56.2,
-                    "eval_f1_macro": 0.6346624198146829
+                    "eval_f1_macro": 0.7099370078740157
                 }
             },
             "eng": {
@@ -1123,13 +1121,157 @@
             "arb": {
                 "score": 57.0,
                 "eval_results": {
-                    "eval_f1_macro": 0.6159412105095522
+                    "eval_f1_macro": 0.6486800511905745
                 }
             },
             "eng": {
                 "score": 49.84,
                 "eval_results": {
                     "eval_f1_macro": 0.5452917144762014
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MTL_Thresholds",
+        "subtask_1": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8865896727426932
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8328909705958887
+                }
+            }
+        },
+        "metadata": {
+            "model_arb": "UBC-NLP/MARBERTv2",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": null,
+            "model_eng": "cardiffnlp/twitter-roberta-base-hate",
+            "id_on_site": 454419,
+            "thresholds": {
+                "subtask_1": [
+                    0.20000000000000004
+                ],
+                "subtask_2": [
+                    0.1,
+                    0.7000000000000002,
+                    0.7500000000000002,
+                    0.8000000000000002,
+                    0.9000000000000002
+                ],
+                "subtask_3": [
+                    0.8000000000000002,
+                    0.8000000000000002,
+                    0.7500000000000002,
+                    0.20000000000000004,
+                    0.7500000000000002,
+                    0.6000000000000002
+                ]
+            }
+        },
+        "subtask_2": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.7099370078740157
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5174202382245812
+                }
+            }
+        },
+        "subtask_3": {
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6486800511905745
+                }
+            },
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5499493888923438
+                }
+            }
+        }
+    },
+    {
+        "trial_id": "MTL_Thresholds_1",
+        "subtask_1": {
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8368483132814344
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.8760949195731804
+                }
+            }
+        },
+        "metadata": {
+            "model_eng": "cardiffnlp/twitter-roberta-base-hate",
+            "approach": "MTL_no_gate",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 10,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "datasets_merge": null,
+            "id_on_site": 454490,
+            "thresholds": {
+                "subtask_1": [
+                    0.3
+                ],
+                "subtask_2": [
+                    0.65,
+                    0.65,
+                    0.8,
+                    0.55,
+                    0.6
+                ],
+                "subtask_3": [
+                    0.35,
+                    0.35,
+                    0.6,
+                    0.5,
+                    0.55,
+                    0.6
+                ]
+            },
+            "model_arb": "UBC-NLP/MARBERTv2"
+        },
+        "subtask_2": {
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5086829260166259
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6997458019162542
+                }
+            }
+        },
+        "subtask_3": {
+            "eng": {
+                "eval_results": {
+                    "eval_f1_macro": 0.5410468548504098
+                }
+            },
+            "arb": {
+                "eval_results": {
+                    "eval_f1_macro": 0.6514737259454034
                 }
             }
         }
