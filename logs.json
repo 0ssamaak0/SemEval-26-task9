@@ -110,6 +110,45 @@
         }
     },
     {
+        "trial_id": "B000002",
+        "subtask_1": {
+            "eng": {
+                "score": 0.79
+            },
+            "arb": {
+                "score": 0.81
+            }
+        },
+        "metadata": {
+            "model_eng": "cardiffnlp/twitter-roberta-base-hate",
+            "approach": "starter",
+            "learning_rate": 2e-05,
+            "num_train_epochs": 3,
+            "per_device_train_batch_size": 32,
+            "per_device_eval_batch_size": 16,
+            "num_types": 5,
+            "num_manifestations": 6,
+            "id_on_site": 455317,
+            "model_arb": "UBC-NLP/MARBERTv2"
+        },
+        "subtask_2": {
+            "eng": {
+                "score": 0.37
+            },
+            "arb": {
+                "score": 0.129
+            }
+        },
+        "subtask_3": {
+            "eng": {
+                "score": 0.39
+            },
+            "arb": {
+                "score": 0.365
+            }
+        }
+    },
+    {
         "trial_id": "GT000001",
         "metadata": {
             "approach": "MTL_Gated",
@@ -1277,14 +1316,16 @@
         }
     },
     {
-        "trial_id": "MTL_run",
+        "trial_id": "MTL_aug25",
         "subtask_1": {
             "arb": {
+                "score": 82,
                 "eval_results": {
                     "eval_f1_macro": 0.9006480858448136
                 }
             },
             "eng": {
+                "score": 76.2,
                 "eval_results": {
                     "eval_f1_macro": 0.8405424362871171
                 }
@@ -1300,6 +1341,7 @@
             "num_types": 5,
             "num_manifestations": 6,
             "datasets_merge": null,
+            "id_on_site": 454555,
             "thresholds": {
                 "subtask_1": [
                     0.6
@@ -1324,11 +1366,13 @@
         },
         "subtask_2": {
             "arb": {
+                "score": 58.4,
                 "eval_results": {
                     "eval_f1_macro": 0.724460001346246
                 }
             },
             "eng": {
+                "score": 42.8,
                 "eval_results": {
                     "eval_f1_macro": 0.5524720088654516
                 }
@@ -1336,11 +1380,13 @@
         },
         "subtask_3": {
             "arb": {
+                "score": 59.8,
                 "eval_results": {
                     "eval_f1_macro": 0.6879846501209425
                 }
             },
             "eng": {
+                "score": 49.6,
                 "eval_results": {
                     "eval_f1_macro": 0.5611419384144595
                 }
