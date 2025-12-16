@@ -1,4 +1,4 @@
-## 0ssamaak0 at SemEval-2026 Task 9
+## SemEval-2026 Task 9
 
 Multilingual polarization detection (Arabic + English) across three linked subtasks:
 - Subtask 1: binary polarized vs. non‑polarized.
