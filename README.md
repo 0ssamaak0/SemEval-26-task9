@@ -7,7 +7,8 @@ Multilingual polarization detection (Arabic + English) across three linked subta
 
 ## What’s in this repo
 - `src/`: multitask model, training, thresholds, metrics, prediction.
-- `dev_phase/`: SemEval training/dev splits per subtask and language.
+- `DSPY/`: Notebooks for DSPY prompting
+- `dspy_cache/`: MIPROv2 optimized DSPY programs
 - `figures/`: plots used in the paper (label skew, gating, dialectness, model selection).
 ## Approach
 - Shared encoder MTL (MARBERTv2 for Arabic; hate-speech RoBERTa for English) with three heads.
