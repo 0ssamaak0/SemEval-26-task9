@@ -10,6 +10,7 @@ Multilingual polarization detection (Arabic + English) across three linked subta
 - `DSPY/`: Notebooks for DSPY prompting
 - `dspy_cache/`: MIPROv2 optimized DSPY programs
 - `figures/`: plots used in the paper (label skew, gating, dialectness, model selection).
+
 ## Approach
 - Shared encoder MTL (MARBERTv2 for Arabic; hate-speech RoBERTa for English) with three heads.
 - Inference-time hard gating: Subtask 1 mask zeros Subtasks 2–3 outputs for non‑polarized texts.
@@ -33,6 +34,7 @@ Multilingual polarization detection (Arabic + English) across three linked subta
   ![Ensemble](figures/arbertmarbert.png)
 
 ## Headline results (F1 Macro, dev as test)
+(as of 16/12/2025)
 - Subtask 1: 0.839 (AR) / 0.842 (EN): ranked 1st in Arabic
 - Subtask 2: 0.596 (AR) / 0.449 (EN): ranked 5th in Arabic
 - Subtask 3: 0.607 (AR) / 0.496 (EN): ranked 2nd in Arabic
